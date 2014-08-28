@@ -1,0 +1,327 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\usepackage{hyperref}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\date{August, 2014}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                         Header
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+{\LARGE \textbf{Tony Enrique Lattke Urbaneja}}
+
+Twachte 7  \ \ \textbullet
+\ \  27313 Dörverden \ \ \textbullet
+\ \ Niedersachsen - Germany
+\\
++49 174 941 63 40 \ \ \textbullet \ \ \href{mailto:tonylattke@gmail.com}{\nolinkurl{<tonylattke@gmail.com>}}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                       Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+
+\begin{itemize}
+  \parskip=0.1em
+  
+\item
+  \headerrow
+  {\textbf{Universidad Simón Bolívar}}
+  {\textbf{Miranda, Ve}}
+  \\
+  \headerrow
+  {\emph{Jornadas Interuniversitarias de Ciencias de la Computación - Head Cordinator}}
+  {\emph{09/2011 -- 09/2013}}
+  \begin{itemize*}
+  \item Team organization and sponsor companies contact.
+  \end{itemize*}
+  
+  \headerrow
+  {\emph{Centro de Estudiantes de Ingeniería de la Computación - Collaborator}}
+  {\emph{09/2012 -- 09/2013}}
+  \begin{itemize*}
+  \item Support for the new president. 
+  \item Event planning computer career.
+  \item Sales service intended for the collection 
+	of resources for students of computer center.
+  \end{itemize*}
+  
+  \headerrow
+  {\emph{Centro de Estudiantes de Ingeniería de la Computación - President}}
+  {\emph{07/2011 -- 07/2012}}
+  \begin{itemize*}
+  \item Event planning computer career.
+  \item Sales service intended for the collection 
+	of resources for students of computer center.
+  \item Implementation of system to improve revenue management.
+  \end{itemize*}
+
+  \headerrow
+  {\emph{Jornadas Interuniversitarias de Ciencias de la Computación - Collaborator}}
+  {\emph{09/2010 -- 09/2011}}
+  \begin{itemize*}
+  \item Managing and maintaining event website.
+  \end{itemize*}
+  
+  \headerrow
+  {\emph{Centro de Estudiantes de Ingeniería de la Computación - Collaborator}}
+  {\emph{09/2010 -- 07/2011}}
+  \begin{itemize*}
+  \item Event planning computer career.
+  \item Sales service intended for the collection 
+	of resources for students of computer center.
+  \end{itemize*}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                     Formal education
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Formal education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+\item 
+   \headerrow
+   {\textbf{Universidad Simón Bolívar}}
+   {\textbf{Miranda, Ve}}
+	\\
+	\headerrow
+   {\emph{Computing Engineer}}
+   {\emph{09/2007 -- 09/2013}}
+   
+   
+   {\emph{- Specialization:}}
+   \\
+   {\emph{     Computer graphics}}
+   \\
+   {\emph{     Artificial intelligence}}
+   \\
+   {\emph{     Design and implementation of programming languages}}
+   \\
+   \\
+   {\emph{- Electives:}}
+   \\
+   {\emph{     Artificial intelligence for Video games}}
+   \\
+   {\emph{     Introduction to Robotics}}
+   \\
+   {\emph{     Topics in Computer graphics in Video games}}
+   \\
+   \\
+   {\emph{- Thesis Research Topic. The project obtained an “Exceptionally good” mention:}}
+   \\
+   {\emph{     Random content generation based on constraints}}
+
+ \item 
+   \headerrow
+   {\textbf{U.E. Instituto Humanitas}}
+   {\textbf{Dtto. Capital, Ve}}
+	\\
+	\headerrow
+   {\emph{Bachelor of Science}}
+   {\emph{09/2002 -- 09/2007}}
+	\\
+	\headerrow
+   {\emph{Recognition of outstanding student}}
+   {\emph{2007}}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                     Certifications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Certifications}
+
+\begin{itemize}
+	\parskip=0.1em
+
+\item 
+   \headerrow
+   {\textbf{VFX Latino América}}
+   {\textbf{Miranda, Ve}}
+  \\
+  \headerrow
+   {\emph{Visual Effects and 3D Animation workshop}}
+   {\emph{11/2013 -- 02/2014}}
+
+\item 
+   \headerrow
+   {\textbf{Instituto Arts}}
+   {\textbf{Miranda, Ve}}
+	\\
+	\headerrow
+   {\emph{After Effects CS5.5}}
+   {\emph{09/2011}}
+	\\
+	\headerrow
+   {\emph{3D Studio Max 2009 - Animation and Design of characters}}
+   {\emph{03/2010}}
+	\\
+	\headerrow
+   {\emph{3D Studio Max 2009}}
+   {\emph{12/2009}}
+	\\
+	\headerrow
+   {\emph{Autocad 3D 2006 }}
+   {\emph{08/2006}}
+	\\
+	\headerrow
+   {\emph{Autocad 2D 2006}}
+   {\emph{07/2005}}
+
+\item 
+   \headerrow
+   {\textbf{Uneweb}}
+   {\textbf{Miranda, Ve}}
+	\\
+	\headerrow
+   {\emph{Blender}}
+   {\emph{2010}}
+\end{itemize}
+
+%\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                       Contests
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Contests}
+
+\begin{itemize}
+	\parskip=0.1em
+\item 
+   \headerrow
+   {\textbf{Caracas Gamejam 2013}}
+   {\textbf{Miranda, Ve}}
+	\\
+	\headerrow
+   {\emph{Enter The Panic: Heart Attack}}
+   {\emph{http://globalgamejam.org/2013/enter-panic-heart-attack}}
+\item 
+   \headerrow
+   {\textbf{Caracas Gamejam 2011}}
+   {\textbf{Miranda, Ve}}
+	\\
+	\headerrow
+   {\emph{Enter The Panic: The Attack of Matus}}
+   {\emph{http://archive.globalgamejam.org/2011/enter-panic-attack-matus}}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                     Knowledges
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Knowledges}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	
+\item[Languages:]
+  Spanish (Native language), English (B2), German (A2)
+\item[Programming Languages:]
+  C, C++, C\#, CSS, Haskell, HTML, Java, Javascript, \LaTeX, Matlab, MEL, Perl, PHP, Prolog, Python, R, Ruby, Shell script, SQL
+\item[Frameworks:]
+  Catalyst, Django, Rails, XNA, Yesod
+\item[Operating Systems:]
+  Windows, Linux
+\item[Aplications:]
+  3D Studio Max, After Efects, Autocad, Blender, Maya, Photoshop, Unity, Unreal Development Kit, Microsoft Office Word, Excel, PowerPoint, Publisher
+\item[Others:]
+  Git, Heroku
+  
+\end{description*}
+\end{indentsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                 Abilities and Skills
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Abilities and Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+
+\item
+  Proactive attitude
+\item
+  Willingness to learn new skills
+\item
+  Creativity and innovation available
+\item
+  Ability to assume responsibilities
+\item
+  Ability to work in team
+\item
+  Easy to work with public
+\item
+  Working under pressure
+
+\end{description*}
+\end{indentsection}
+
+
+\end{document}

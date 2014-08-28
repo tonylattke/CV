@@ -1,0 +1,328 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\usepackage{hyperref}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\date{Agosto, 2014}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                       Encabezado
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+{\LARGE \textbf{Tony Enrique Lattke Urbaneja}}
+
+
+Twachte 7  \ \ \textbullet
+\ \  27313 Dörverden \ \ \textbullet
+\ \ Niedersachsen - Alemania
+\\
++49 174 941 63 40 \ \ \textbullet \ \ \href{mailto:tonylattke@gmail.com}{\nolinkurl{<tonylattke@gmail.com>}}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                      Experiencia
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experiencia}
+
+\begin{itemize}
+  \parskip=0.1em
+  
+\item
+  \headerrow
+  {\textbf{Universidad Simón Bolívar}}
+  {\textbf{Miranda, Ve}}
+  \\
+  \headerrow
+  {\emph{Jornadas Interuniversitarias de Ciencias de la Computación - Coordinador General}}
+  {\emph{09/2011 -- 09/2013}}
+  \begin{itemize*}
+  \item Organización del equipo de trabajo y contacto con empresas patrocinantes.
+  \end{itemize*}
+  
+  \headerrow
+  {\emph{Centro de Estudiantes de Ingeniería de la Computación - Colaborador}}
+  {\emph{09/2012 -- 09/2013}}
+  \begin{itemize*}
+  \item Apoyo al presidente.
+  \item Organización de eventos de la carrera.
+  \item Servicio de ventas destinado a la recolección
+    de recursos para el centro de estudiantes.
+  \end{itemize*}
+  
+  \headerrow
+  {\emph{Centro de Estudiantes de Ingeniería de la Computación - Presidente}}
+  {\emph{07/2011 -- 07/2012}}
+  \begin{itemize*}
+  \item Organización de eventos de la carrera.
+  \item Servicio de ventas destinado a la recolección
+    de recursos para el centro de estudiantes.
+  \item Implementación de sistema de ventas para mejorar administración de ingresos.
+  \end{itemize*}
+
+  \headerrow
+  {\emph{Jornadas Interuniversitarias de Ciencias de la Computación - Organizador}}
+  {\emph{09/2010 -- 09/2011}}
+  \begin{itemize*}
+  \item Administración y mantenimiento de página web del evento.
+  \end{itemize*}
+  
+  \headerrow
+  {\emph{Centro de Estudiantes de Ingeniería de la Computación - Colaborador}}
+  {\emph{09/2010 -- 07/2011}}
+  \begin{itemize*}
+  \item Organización de eventos de la carrera.
+  \item Servicio de ventas destinado a la recolección
+    de recursos para el centro de estudiantes.
+  \end{itemize*}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                    Educación Formal
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+
+\vspace{-0.4em}
+\subsection*{Educación Formal}
+
+\begin{itemize}
+	\parskip=0.1em
+
+\item 
+   \headerrow
+   {\textbf{Universidad Nacional Experimental Simón Bolívar}}
+   {\textbf{Miranda, Ve}}
+	\\
+	\headerrow
+   {\emph{Ingeniero en Computación}}
+   {\emph{09/2007 -- 09/2013}}
+   
+   
+   {\emph{- Especialización:}}
+   \\
+   {\emph{     Computación gráfica}}
+   \\
+   {\emph{     Inteligencia Artificial}}
+   \\
+   {\emph{     Diseño e implementación de lenguajes de programación}}
+   \\
+   \\
+   {\emph{- Electivas Libres:}}
+   \\
+   {\emph{     Inteligencia Artificial para videojuegos}}
+   \\
+   {\emph{     Introducción a la robótica}}
+   \\
+   {\emph{     Topicos de Computación gráfica en videojuegos}}
+   \\
+   \\
+   {\emph{- Proyecto de Grado con mención honorífica:}}
+   \\
+   {\emph{     Generación de contenido aleatorio basado en restricciones}}
+
+ \item 
+   \headerrow
+   {\textbf{U.E. Instituto Humanitas}}
+   {\textbf{Dtto. Capital, Ve}}
+	\\
+	\headerrow
+   {\emph{Bachiller en Ciencias}}
+   {\emph{09/2002 -- 09/2007}}
+	\\
+	\headerrow
+   {\emph{Reconocimiento de alumno destacado}}
+   {\emph{2007}}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                     Certificaciones
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hrule
+\vspace{-0.4em}
+\subsection*{Certificaciones}
+
+\begin{itemize}
+	\parskip=0.1em
+
+\item 
+   \headerrow
+   {\textbf{VFX Latino América}}
+   {\textbf{Miranda, Ve}}
+  \\
+  \headerrow
+   {\emph{Taller de efectos visuales y animación 3D}}
+   {\emph{11/2013 -- 02/2014}}
+
+\item 
+   \headerrow
+   {\textbf{Instituto Arts}}
+   {\textbf{Miranda, Ve}}
+	\\
+	\headerrow
+   {\emph{After Effects CS5.5}}
+   {\emph{09/2011}}
+	\\
+	\headerrow
+   {\emph{3D Studio Max 2009 - Animación y Diseño de personajes}}
+   {\emph{03/2010}}
+	\\
+	\headerrow
+   {\emph{3D Studio Max 2009}}
+   {\emph{12/2009}}
+	\\
+	\headerrow
+   {\emph{Autocad 3D 2006}}
+   {\emph{08/2006}}
+	\\
+	\headerrow
+   {\emph{Autocad 2D 2006}}
+   {\emph{07/2005}}
+
+\item 
+   \headerrow
+   {\textbf{Uneweb}}
+   {\textbf{Miranda, Ve}}
+	\\
+	\headerrow
+   {\emph{Blender}}
+   {\emph{07/2009}}
+\end{itemize}
+
+%\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                       Concursos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Concursos}
+
+\begin{itemize}
+	\parskip=0.1em
+\item 
+   \headerrow
+   {\textbf{Caracas Gamejam 2013}}
+   {\textbf{Miranda, Ve}}
+	\\
+	\headerrow
+   {\emph{Enter The Panic: Heart Attack}}
+   {\emph{http://globalgamejam.org/2013/enter-panic-heart-attack}}
+\item 
+   \headerrow
+   {\textbf{Caracas Gamejam 2011}}
+   {\textbf{Miranda, Ve}}
+	\\
+	\headerrow
+   {\emph{Enter The Panic: The Attack of Matus}}
+   {\emph{http://archive.globalgamejam.org/2011/enter-panic-attack-matus}}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                     Conocimientos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Conocimientos}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	
+\item[Lenguajes:]
+  Español (Lengua materna), Ingles (B2), Alemán (A2)
+\item[Lenguajes de programación:]
+  C, C++, C\#, CSS, Haskell, HTML, Java, Javascript, \LaTeX, Matlab, MEL, Perl, PHP, Prolog, Python, R, Ruby, Shell script, SQL
+\item[Frameworks:]
+  Catalyst, Django, Rails, XNA, Yesod
+\item[Sistemas Operativos:]
+  Windows, Linux
+\item[Aplicaciones:]
+  3D Studio Max, After Efects, Autocad, Blender, Maya, Photoshop, Unity, Unreal Development Kit, Microsoft Office Word, Excel, PowerPoint, Publisher
+\item[Otros:]
+  Git, Heroku
+  
+\end{description*}
+\end{indentsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               Habilidades y Destrezas
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Habilidades y Destrezas}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+
+\item
+  Actitud Proactiva
+\item
+  Disposición a adquirir nuevos conocimientos
+\item
+  Creatividad y disposición de innovación
+\item
+  Capacidad para asumir responsabilidades
+\item
+  Facilidad para trabajar en equipo
+\item
+  Facilidad para trabajar con público
+\item
+  Trabajo bajo presión
+
+\end{description*}
+\end{indentsection}
+
+
+\end{document}
