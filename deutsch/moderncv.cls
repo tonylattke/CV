@@ -135,10 +135,10 @@
 \AtEndPreamble{
   \@ifpackageloaded{CJK}
     {
-      \ifpdf\RequirePackage[pdftex,CJKbookmarks]{hyperref}
+      \ifpdf\RequirePackage[pdftex,CJKbookmarks,colorlinks=True,linkcolor=linkscolorTony,urlcolor=linkscolorTony]{hyperref}
       \else\RequirePackage[dvips,CJKbookmarks]{hyperref}\fi}
     {
-      \ifpdf\RequirePackage[pdftex]{hyperref}
+      \ifpdf\RequirePackage[pdftex,colorlinks=True,linkcolor=linkscolorTony,urlcolor=linkscolorTony]{hyperref}
       \else\RequirePackage[dvips]{hyperref}\fi}
   \AtBeginDocument{
     \hypersetup{
@@ -215,6 +215,7 @@
 \providecommand*{\homepagesymbol}{{\Large\ComputerMouse}}
 
 % colors
+\definecolor{linkscolorTony}{rgb}{0.25,0.50,0.75}
 \definecolor{firstnamecolor}{rgb}{0,0,0}
 \definecolor{familynamecolor}{rgb}{0,0,0}
 \definecolor{titlecolor}{rgb}{0,0,0}
