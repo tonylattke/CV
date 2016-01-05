@@ -1,418 +1,261 @@
-\documentclass[10pt,letterpaper]{article}
-\usepackage[letterpaper,margin=0.75in,bottom=10mm,top=14mm]{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage{mdwlist}
-\usepackage[T1]{fontenc}
-\usepackage{textcomp}
-\usepackage{tgpagella}
-\usepackage{hyperref}
-\pagestyle{empty}
-\setlength{\tabcolsep}{0em}
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+% 
+% Original Version by:
+% Xavier Danaux 	<xdanaux@gmail.com>
+% Thomas Quaritsch 	<t.quaritsch@student.tugraz.at>
+%
+% Recently modify by:
+% Tony Lattke		<tonylattke@gmail.com>
 
-\hypersetup{
-  colorlinks=true,
-  linkcolor=blue,
-  urlcolor=blue
+\documentclass[11pt,a4paper,roman]{moderncv}
+
+\usepackage[german]{babel}
+\usepackage{moderncv-additions}
+
+% moderncv themes
+%\moderncvtheme{casual}   						% optional arguments are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{classic}                	% idem
+\moderncvtheme[blue,roman]{casual}
+
+% Euro Symbol
+\usepackage[official]{eurosym}
+
+% Use roman font
+\usepackage{mathpazo}
+%\renewcommand{\sfdefault}{\rmdefault}
+\renewcommand{\rmdefault}{\sfdefault}
+
+
+% character encoding
+\usepackage[utf8]{inputenc}                   	% replace by the encoding you are using
+
+\usepackage{lipsum}
+
+\usepackage{background}
+\backgroundsetup{
+scale=1,
+angle=0,
+opacity=1
 }
 
-% indentsection style, used for sections that aren't already in lists
-% that need indentation to the level of all text in the document
-\newenvironment{indentsection}[1]%
-{\begin{list}{}%
-	{\setlength{\leftmargin}{#1}}%
-	\item[]%
+\newcommand\BackImage[2][scale=1]{%
+\BgThispage
+\backgroundsetup{
+  contents={\includegraphics[#1]{#2}}
+  }
 }
-{\end{list}}
 
-% opposite of above; bump a section back toward the left margin
-\newenvironment{unindentsection}[1]%
-{\begin{list}{}%
-	{\setlength{\leftmargin}{-0.5#1}}%
-	\item[]%
-}
-{\end{list}}
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\setlength{\hintscolumnwidth}{3cm}			  	% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
 
-% format two pieces of text, one left aligned and one right aligned
-\newcommand{\headerrow}[2]
-{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
-	#1 &
-	#2 \\
-\end{tabular*}}
+\AtBeginDocument{\recomputelengths}           	% required when changes are made to page layout lengths
 
-% make "C++" look pretty when used in text by touching up the plus signs
-\newcommand{\CPP}
-{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+% personal data
+\firstname{Tony}
+\secondname{Enrique}
+\familyname{Lattke}
+\secondfamilyname{Urbaneja}
+\title{Tony Lattke - CV}               	% optional, remove the line if not wanted
+\address{Buntentorsteinweg 305}{28201 Bremen} 	% optional, remove the line if not wanted
+\mobile{0174 941 63 40}                     	% optional, remove the line if not wanted
+%\phone{phone (optional)}                      	% optional, remove the line if not wanted
+%\fax{fax (optional)}                          	% optional, remove the line if not wanted
+\email{tonylattke@gmail.com}                   	% optional, remove the line if not wanted
+%\extrainfo{additional information (optional)} 	% optional, remove the line if not wanted
+\photo[64pt]{picture}                          	% '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{„Harte Dinge sind für viele \\ einfach Dinge gemacht” -- \href{mailto:rlattke@hotmail.com}{Mein Vater Rodolfo Lattke}}                 % optional, remove the line if not wanted
 
-% and the actual content starts here
+%\nopagenumbers{}                             	% uncomment to suppress automatic page numbering for CVs longer than one page
+
 \begin{document}
 
-\date{Agosto, 2014}
+\BackImage[width=\paperwidth,height=\paperheight]{deck}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                       Encabezado
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% color redefinitions must be after \begin{document}!
+% \definecolor{firstnamecolor}{RGB}{0,255,0}
+% \definecolor{familynamecolor}{RGB}{138,74,57}
+% \definecolor{quotecolor}{RGB}{125,85,85}
+% \definecolor{addresscolor}{RGB}{125,85,85}
+% \definecolor{sectiontitlecolor}{RGB}{138,74,57}
+% \definecolor{subsectioncolor}{RGB}{125,85,85}
+% \definecolor{footersymbolcolor}{RGB}{125,85,85}	
 
-\begin{center}
-{\LARGE \textbf{Tony Enrique Lattke Urbaneja}}
+% Configuration
 
-Buntentorsteinweg 305  \ \ \textbullet
-\ \  28201 Bremen - Alemania
-\\
-+49 174 941 63 40 \ \ \textbullet \ \  \href{http://tony.lattke.org}{tony.lattke.org} \ \ \textbullet \ \ \href{mailto:tonylattke@gmail.com}{\nolinkurl{<tonylattke@gmail.com>}}
-\end{center}
+\makeatletter
+\definecolor{sectionrectanglecolor}{RGB}{128,128,128}
+\pagestyle{empty}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                      Experiencia
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %									Cover
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter*{Bewerbungs}{unterlagen}
+\newpage
+\BackImage[width=\paperwidth,height=\paperheight]{deck}
+-
 
-\hrule
-\vspace{-0.4em}
-\subsection*{Experiencia}
 
-\begin{itemize}
-  \parskip=0.1em
+%\begin{minipage}{1.0\textwidth}
+%	\section{Inhalt}
+%	\tableofcontents
+%\end{minipage}
 
-\item
-  \headerrow
-  {\textbf{Instalaciones RS 14 ca}}
-  {\textbf{Caracas, Ve}}
-  \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%									CV
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 
-  \headerrow
-  {\emph{Dibujante en Autocad}}
-  {\emph{09/2005 -- 02/2014}}
-  \begin{itemize*}
-  \item Dibujo de instalaciones y piezas mecánicas en Autocad.
-  \end{itemize*}
+\BackImage[width=\paperwidth,height=\paperheight]{Lebenslauf}
 
-\item
-  \headerrow
-  {\textbf{Lo mas Trendy}}
-  {\textbf{Miranda, Ve}}
-  \\
+\vspace*{30mm}
 
-  \headerrow
-  {\emph{Desarrollador Web}}
-  {\emph{08/2013 -- 11/2013}}
-  \begin{itemize*}
-  \item Desarrollo de una aplicación web con python Django, CSS, HTML5 y Javascript.
-  \item Uso de la herramienta de Twython de Twitter.
-  \end{itemize*}
+\pagestyle{fancy}
+%\chapter{}{Lebenslauf}
+\makequote
 
-\item
-  \headerrow
-  {\textbf{Universidad Simón Bolívar}}
-  {\textbf{Miranda, Ve}}
-  \\
+\begin{minipage}{0.75\textwidth}
+\section{Información personal}
 
-  \headerrow
-  {\emph{\href{http://clei2013.org.ve}{CLEI 2013} - Colaborador}}
-  {\emph{10/2013 -- 10/2013}}
-  \begin{itemize*}
-  \item Colaborador miembro del comité de logística.
-  \end{itemize*}
+\cvline{Nombre}{\@firstname~\@secondname~\@familyname~\@secondfamilyname}
+\cvline{Fecha de nacimiento}{14 de febrero de 1990 Caracas, Venezuela}
+\cvline{Nacionalidades}{Alemán y Venezolano}
+\cvline{Estado civil}{Soltero}
+\cvline{Website}{\href{http://tony.lattke.org}{tony.lattke.org}}
+\cvline{Blog}{\href{http://tonylattke.blogspot.com}{tonylattke.blogspot.com}}
+%\cvline{}{}
+\end{minipage}
 
-  \headerrow
-  {\emph{\href{http://joincic.com.ve}{Jornadas Interuniversitarias de Ciencias de la Computación} - Coordinador General}}
-  {\emph{09/2011 -- 09/2013}}
-  \begin{itemize*}
-  \item Organización del equipo de trabajo y contacto con empresas patrocinantes.
-  \end{itemize*}
-  
-  \headerrow
-  {\emph{\href{http://usbceic.ldc.usb.ve}{Centro de Estudiantes de Ingeniería de la Computación} - Colaborador}}
-  {\emph{09/2012 -- 09/2013}}
-  \begin{itemize*}
-  \item Apoyo al presidente.
-  \item Organización de eventos de la carrera.
-  \item Servicio de ventas destinado a la recolección
-    de recursos para el centro de estudiantes.
-  \end{itemize*}
-  
-  \headerrow
-  {\emph{\href{http://usbceic.ldc.usb.ve}{Centro de Estudiantes de Ingeniería de la Computación} - Presidente}}
-  {\emph{07/2011 -- 07/2012}}
-  \begin{itemize*}
-  \item Organización de eventos de la carrera.
-  \item Servicio de ventas destinado a la recolección
-    de recursos para el centro de estudiantes.
-  \item Implementación de sistema de ventas para mejorar administración de ingresos.
-  \end{itemize*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experiencia profesional} 
 
-  \headerrow
-  {\emph{\href{http://joincic.com.ve}{Jornadas Interuniversitarias de Ciencias de la Computación} - Organizador}}
-  {\emph{09/2010 -- 09/2011}}
-  \begin{itemize*}
-  \item Administración y mantenimiento de página web del evento.
-  \end{itemize*}
-  
-  \headerrow
-  {\emph{\href{http://usbceic.ldc.usb.ve}{Centro de Estudiantes de Ingeniería de la Computación} - Colaborador}}
-  {\emph{09/2010 -- 07/2011}}
-  \begin{itemize*}
-  \item Organización de eventos de la carrera.
-  \item Servicio de ventas destinado a la recolección
-    de recursos para el centro de estudiantes.
-  \end{itemize*}
+\cvline{09/2005 - 11/2013}{\textbf{Dibujante en Autocad}, Instalaciones RS 14 ca, Venezuela}
+\cvline{}{- Dibujo de instalaciones y piezas mecánicas.}
+\cvline{08/2013 - 11/2013}{\textbf{Desarrollador Web}, Lo mas Trendy, Venezuela}
+\cvline{}{- Desarrollo de una aplicación web con Django Framework, Twython, CSS, HTML5 y Javascript.}
 
-\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Educación Formal} 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                    Educación Formal
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cventry{09/2014 -- Present}{Cursos intensivos de alemán A2, B1, B2, C1}{Volkshochschule Bremen}{}{}{}
+\cventry{09/2007 -- 02/2014}{Ingeniero en Computación}{Universidad Simón Bolívar}{Venezuela}{\textit{Finalizado}}{}  % arguments 3 to 6 are optional
+\cventry{09/2002 -- 07/2007}{Bachillerato}{U. E. Instituto Humanitas}{Caracas, Venezuela}{\textit{Finalizado}}{}
+%\cvline{}{}
 
-\hrule
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conferencias}
 
-\vspace{-0.4em}
-\subsection*{Educación Formal}
+\cvline{10/2014}{Autores: Isaac López, Tony Lattke \& Carlos Pérez. \textbf{Generación de contenido aleatorio basado en restricciones, \emph{\href{http://www.concisa.net.ve/2014/}{CoNCISa 2014 (Computer Congress)}}}, Caracas,Venezuela.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Premios}
 
-\begin{itemize}
-	\parskip=0.1em
+\cvline{10/2014}{Autores: Tony Lattke, Isaac López \& Carlos Perez. \textbf{Primer lugar por proyecto especial de grado (Generación de contenido aleatorio basado en restricciones) en \textit{\href{http://www.concisa.net.ve/2014}{CoNCISa 2014} (Conferencia)}}, Caracas, Venezuela.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Idiomas}
 
-\item 
-   \headerrow
-   {\textbf{Universidad Nacional Experimental Simón Bolívar}}
-   {\textbf{Miranda, Ve}}
-	\\
-	\headerrow
-   {\emph{Ingeniero en Computación}}
-   {\emph{09/2007 -- 09/2013}}
-   
-   
-   {\emph{- Especialización:}}
-   \\
-   {\emph{     Computación gráfica}}
-   \\
-   {\emph{     Inteligencia Artificial}}
-   \\
-   {\emph{     Diseño e implementación de lenguajes de programación}}
-   \\
-   \\
-   {\emph{- Electivas Libres:}}
-   \\
-   {\emph{     Inteligencia Artificial para videojuegos}}
-   \\
-   {\emph{     Introducción a la robótica}}
-   \\
-   {\emph{     Topicos de Computación gráfica en videojuegos}}
-   \\
-   \\
-   {\emph{- Proyecto de Grado con mención honorífica:}}
-   \\
-   {\emph{     Generación de contenido aleatorio basado en restricciones}}
+\cvline{}{Español (Lengua materna), Alemán (C1), Inglés (B2)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 
- \item 
-   \headerrow
-   {\textbf{U.E. Instituto Humanitas}}
-   {\textbf{Dtto. Capital, Ve}}
-	\\
-	\headerrow
-   {\emph{Bachiller en Ciencias}}
-   {\emph{09/2002 -- 09/2007}}
-	\\
-	\headerrow
-   {\emph{Reconocimiento de alumno destacado}}
-   {\emph{2007}}
-\end{itemize}
+\BackImage[width=\paperwidth,height=\paperheight]{Inhalt}
+\vspace*{20mm}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                     Conferences
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\hrule
-\vspace{-0.4em}
-\subsection*{Conferencias}
 
-\begin{itemize}
-  \parskip=0.1em
-\item 
-   \headerrow
-   {\textbf{Generación de contenido aleatorio basado en restricciones, \emph{\href{http://www.concisa.net.ve/2014/}{CoNCISa 2014}}}}
-   {\textbf{Caracas, Ve}}
-  \\
-  \headerrow
-   {Autores: Isaac López, Tony Lattke \& Carlos Pérez (Tutor)}{}
-\end{itemize}
-%\newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                     Awards
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\hrule
-\vspace{-0.4em}
-\subsection*{Premios}
+% \section{Berufserfahrung} 
 
-\begin{itemize}
-  \parskip=0.1em
-\item 
-   \headerrow
-   {\textbf{Primer lugar por proyecto especial de grado en \emph{\href{http://www.concisa.net.ve/2014/}{CoNCISa 2014}}}}
-   {\textbf{Caracas, Ve}}
-  \\
-  \headerrow
-   {Autores: Isaac López, Tony Lattke \& Carlos Pérez (Tutor)}{}
-\end{itemize}
+% \cventry{xx/xxxx -- xx/xxxx}{Musterkaufmann}{Musterfirma}{Musterort}{}{Bemerkung}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conocimientos} 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                     Certifications
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\hrule
-\vspace{-0.4em}
-\subsection*{Certificaciones}
+\cvline{Lenguajes de programación}{C, C++, C\#, CSS, Haskell, HTML, Java, Javascript, \LaTeX, Matlab, MEL, Perl, PHP, Prolog, Python, R, Ruby, Shell script, SQL}
+\cvline{Frameworks}{Catalyst, Django, Laravel, Rails, XNA, Yesod}
+\cvline{Sistemas operativos}{Windows, Linux}
+\cvline{Programas}{3D Studio Max, After Efects, Autocad, Blender, Maya, Photoshop, Unity, Microsoft Office Word, Excel, PowerPoint, Publisher}
+\cvline{Otros}{Git, Heroku}
 
-\begin{itemize}
-	\parskip=0.1em
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Kompetenzen} 
 
-\item 
-   \headerrow
-   {\textbf{Miriadax}}
-   {\textbf{Curso en línea}}
-  \\
-  \headerrow
-   {\emph{Introdución a la inteligencia de negocios}}
-   {\emph{01/2015 -- 02/2015}}
-  \\
-  \headerrow
-   {\emph{Estrategias de Marketing Online. Community Manager}}
-   {\emph{01/2015 -- 02/2015}}
-  \\
-  \headerrow
-   {\emph{Introducción al lenguaje cinematográfico}}
-   {\emph{12/2014}}
-\item 
-   \headerrow
-   {\textbf{VFX Latino América}}
-   {\textbf{Miranda, Ve}}
-  \\
-  \headerrow
-   {\emph{Taller de efectos visuales y animación 3D}}
-   {\emph{11/2013 -- 02/2014}}
+% \cvline{Global Gamejam 2015}{\href{http://globalgamejam.org/2015/games/path-blank}{Path in blank}}
+% \cvline{Caracas Gamejam 2013}{\href{http://globalgamejam.org/2013/enter-panic-heart-attack}{Enter The Panic: Heart Attack}}
+% \cvline{Caracas Gamejam 2011}{\href{http://archive.globalgamejam.org/2011/enter-panic-attack-matus}{Enter The Panic: The Attack of Matus}}
 
-\item 
-   \headerrow
-   {\textbf{Instituto Arts}}
-   {\textbf{Miranda, Ve}}
-	\\
-	\headerrow
-   {\emph{After Effects CS5.5}}
-   {\emph{09/2011}}
-	\\
-	\headerrow
-   {\emph{3D Studio Max 2009 - Animación y Diseño de personajes}}
-   {\emph{03/2010}}
-	\\
-	\headerrow
-   {\emph{3D Studio Max 2009}}
-   {\emph{12/2009}}
-	\\
-	\headerrow
-   {\emph{Autocad 3D 2006}}
-   {\emph{08/2006}}
-	\\
-	\headerrow
-   {\emph{Autocad 2D 2006}}
-   {\emph{07/2005}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Actividades en la universidad} 
 
-\item 
-   \headerrow
-   {\textbf{Uneweb}}
-   {\textbf{Miranda, Ve}}
-	\\
-	\headerrow
-   {\emph{Blender}}
-   {\emph{07/2009}}
-\end{itemize}
+\cvline{10/2013 -- 10/2013}{Colaborador in \href{http://clei2013.org.ve/en}{CLEI 2013} (Congreso)}
+\cvline{09/2011 -- 09/2013}{Coordinador general in \href{http://joincic.com.ve}{Joincic} (Congreso)}
+\cvline{09/2012 -- 09/2013}{Colaborador in \href{http://usbceic.ldc.usb.ve}{Centro de estudiantes de ingeniería en computación USB}}
+\cvline{07/2011 -- 07/2012}{Presidente in \href{http://usbceic.ldc.usb.ve}{Centro de estudiantes de ingeniería en computación USB}}
+\cvline{09/2010 -- 09/2011}{Colaborador in \href{http://joincic.com.ve}{Joincic} (Congreso)}
+\cvline{09/2010 -- 07/2011}{Colaborador in \href{http://usbceic.ldc.usb.ve}{Centro de estudiantes de ingeniería en computación USB}}
 
-%\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Talleres y cursos} 
+\cvline{Miriadax} 			{01/2015 -- 02/2015 Introdución a la inteligencia de negocios}
+\cvline{} 					{01/2015 -- 02/2015 Estrategias de Marketing Online. Community Manager}
+\cvline{} 					{12/2014 \hspace{17mm} Introducción al lenguaje cinematográfico}
+\cvline{VFX Latino América}	{11/2013 -- 02/2014 Taller de efectos visuales y animación 3D}
+\cvline{Instituto Arts}		{09/2011 \hspace{15mm} After Effects CS5.5}
+\cvline{}					{03/2010 \hspace{15mm} 3D Studio Max 2009 Animación y Diseño de personajes}
+\cvline{}					{12/2009 \hspace{15mm} 3D Studio Max 2009}
+\cvline{}					{08/2006 \hspace{15mm} Autocad 3D 2006}
+\cvline{}					{07/2005 \hspace{15mm} Autocad 2D 2006}
+\cvline{Uneweb}				{07/2009 \hspace{15mm} Blender}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                       Concursos
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hobbys}
+\cvline{}{Películas, audiolibros y Gimnasio}
 
-\hrule
-\vspace{-0.4em}
-\subsection*{Concursos}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{itemize}
-	\parskip=0.1em
-\item 
-   \headerrow
-   {\textbf{Global Gamejam 2015}}
-   {\textbf{Bremen, De}}
-  \\
-  \headerrow
-   {\emph{\href{http://globalgamejam.org/2015/games/path-blank}{Path in blank}}}{}
-\item 
-   \headerrow
-   {\textbf{Caracas Gamejam 2013}}
-   {\textbf{Miranda, Ve}}
-	\\
-	\headerrow
-   {\emph{\href{http://globalgamejam.org/2013/enter-panic-heart-attack}{Enter The Panic: Heart Attack}}}{}
-\item 
-   \headerrow
-   {\textbf{Caracas Gamejam 2011}}
-   {\textbf{Miranda, Ve}}
-	\\
-	\headerrow
-   {\emph{\href{http://archive.globalgamejam.org/2011/enter-panic-attack-matus}{Enter The Panic: The Attack of Matus}}}{}
-\end{itemize}
+% \vspace*{20mm}
+% Bremen, \today{}\\
+% \includegraphics[width=150pt]{Unterschrift}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                     Conocimientos
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%								Diploma zeugnis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\hrule
-\vspace{-0.4em}
-\subsection*{Conocimientos}
+% \newpage
 
-\begin{indentsection}{\parindent}
-\hyphenpenalty=1000
-\begin{description*}
-	
-\item[Lenguajes:]
-  Español (Lengua materna), Ingles (B2), Alemán (A2)
-\item[Lenguajes de programación:]
-  C, C++, C\#, CSS, Haskell, HTML, Java, Javascript, \LaTeX, Matlab, MEL, Perl, PHP, Prolog, Python, R, Ruby, Shell script, SQL
-\item[Frameworks:]
-  Catalyst, Django, Laravel, Rails, XNA, Yesod
-\item[Sistemas Operativos:]
-  Windows, Linux
-\item[Aplicaciones:]
-  3D Studio Max, After Efects, Autocad, Blender, Maya, Photoshop, Unity, Microsoft Office Word, Excel, PowerPoint, Publisher
-\item[Otros:]
-  Git, Heroku
-  
-\end{description*}
-\end{indentsection}
+% \BackImage[width=\paperwidth,height=\paperheight]{Diplom}
+% \vspace*{30mm}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                               Habilidades y Destrezas
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \chapter{Diploma~~}{Description}
+% \vspace*{1cm}
+% \begin{center}
+% 	Computing Engineer
+% \end{center}
 
-\hrule
-\vspace{-0.4em}
-\subsection*{Habilidades y Destrezas}
+% % Spezialisierung
+% \cvline{Specialization:}{}
+% \cvline{}{Computer graphics}
+% \cvline{}{Artificial intelligence}
+% \cvline{}{Design and implementation of programming languages}
 
-\begin{indentsection}{\parindent}
-\hyphenpenalty=1000
-\begin{description*}
+% % Wahlfächer
+% \cvline{Electives:}{}
+% \cvline{}{Artificial intelligence for Video games}
+% \cvline{}{Introduction to Robotics}
+% \cvline{}{Topics in Computer graphics in Video games}
 
-\item
-  Actitud Proactiva
-\item
-  Disposición a adquirir nuevos conocimientos
-\item
-  Creatividad y disposición de innovación
-\item
-  Capacidad para asumir responsabilidades
-\item
-  Facilidad para trabajar en equipo
-\item
-  Facilidad para trabajar con público
-\item
-  Trabajo bajo presión
+% % Thesis Forschungsthema
+% \cvline{Thesis Research Topic:}{}
+% \cvline{}{The project obtained an “Exceptionally good” mention: Random content generation based on constraints}
 
-\end{description*}
-\end{indentsection}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%									Master
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% \newpage
+% \chapter{Master}{zeugnis}
+% \vspace*{1cm}
+% \begin{center}
+% 		Test	
+% \end{center}
 
 \end{document}

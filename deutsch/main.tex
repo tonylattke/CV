@@ -19,12 +19,33 @@
 %\moderncvtheme[green]{classic}                	% idem
 \moderncvtheme[blue,roman]{casual}
 
+% Euro Symbol
+\usepackage[official]{eurosym}
+
 % Use roman font
 \usepackage{mathpazo}
-\renewcommand{\sfdefault}{\rmdefault}
+%\renewcommand{\sfdefault}{\rmdefault}
+\renewcommand{\rmdefault}{\sfdefault}
+
 
 % character encoding
 \usepackage[utf8]{inputenc}                   	% replace by the encoding you are using
+
+\usepackage{lipsum}
+
+\usepackage{background}
+\backgroundsetup{
+scale=1,
+angle=0,
+opacity=1
+}
+
+\newcommand\BackImage[2][scale=1]{%
+\BgThispage
+\backgroundsetup{
+  contents={\includegraphics[#1]{#2}}
+  }
+}
 
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
@@ -38,9 +59,9 @@
 \secondname{Enrique}
 \familyname{Lattke}
 \secondfamilyname{Urbaneja}
-%\title{Resumé title (optional)}               	% optional, remove the line if not wanted
+\title{Tony Lattke - Lebenslauf}               	% optional, remove the line if not wanted
 \address{Buntentorsteinweg 305}{28201 Bremen} 	% optional, remove the line if not wanted
-\mobile{+49 174 941 63 40}                     	% optional, remove the line if not wanted
+\mobile{0174 941 63 40}                     	% optional, remove the line if not wanted
 %\phone{phone (optional)}                      	% optional, remove the line if not wanted
 %\fax{fax (optional)}                          	% optional, remove the line if not wanted
 \email{tonylattke@gmail.com}                   	% optional, remove the line if not wanted
@@ -51,6 +72,8 @@
 %\nopagenumbers{}                             	% uncomment to suppress automatic page numbering for CVs longer than one page
 
 \begin{document}
+
+\BackImage[width=\paperwidth,height=\paperheight]{deck}
 
 % color redefinitions must be after \begin{document}!
 % \definecolor{firstnamecolor}{RGB}{0,255,0}
@@ -67,101 +90,91 @@
 \definecolor{sectionrectanglecolor}{RGB}{128,128,128}
 \pagestyle{empty}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%									Cover
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter*{\@firstname~~}{\@familyname}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %									Cover
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter*{Bewerbungs}{unterlagen}
+\newpage
+\BackImage[width=\paperwidth,height=\paperheight]{deck}
+-
 
-\vspace*{40mm}
-\begin{minipage}{\textwidth}
-	%\vspace*{3mm}
-	%\familynamestyle{\@firstname}~~\firstnamestyle{\@familyname} 	
-	\hspace*{62mm}{{\color{firstnamecolor}\includegraphics[width=128pt]{picture}}}\\[3mm]
-	\\
-	\@addressstreet, \@addresscity ~~~ \mobilesymbol~\@mobile ~~~ \emailsymbol~\@email
-\end{minipage}
-\begin{minipage}{70pt}
 
-\vspace*{10mm}
-
-\end{minipage}
-
-Ich bin Computer-Ingenieur, habe meinen Abschluss an der „Universidad Simón Bolívar” in Caracas, Venezuela gemacht und mich auf Computer-Grafik, künstliche Intelligenz und Programmiersprachen spezialisiert.
-
-\vspace*{2mm}
-
-Als Programmierer arbeite ich bereits sicher mit fremden Codes, kann aber auch genauso neue Codes für ein Projekt generieren. Ich bin geübt in einem großen Bereich von Programmiersprachen aus Parsen, Codegenerierung und vielen komplexen Algorithmus-Entwicklungen. Das Beherrschen der Programmiersprachen halte ich nicht für ausreichend, da ich denke, dass man für das Lösen eines Problems vor allem wissen muss, welche Programmiersprache gerade die richtige ist. Ich bin ein ausgezeichneter Teamarbeiter und bespreche gerne andere oder eigene Ideen um ein Projekt zu entwickeln. 
-
-\vfill
-
-\begin{minipage}{1.0\textwidth}
-	\section{Inhalt}
-	\tableofcontents
-\end{minipage}
+%\begin{minipage}{1.0\textwidth}
+%	\section{Inhalt}
+%	\tableofcontents
+%\end{minipage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %									CV
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
+\BackImage[width=\paperwidth,height=\paperheight]{Lebenslauf}
+
+\vspace*{30mm}
+
 \pagestyle{fancy}
-\chapter{Curriculum}{~Vit\ae}
+%\chapter{}{Lebenslauf}
 \makequote
 
+\begin{minipage}{0.75\textwidth}
 \section{Persönliche Daten}
-
-\cvline{Name}{\@firstname~\@secondname~\textbf{\@familyname~\@secondfamilyname}}
-\cvline{Anschrift}{\@addressstreet, \@addresscity}
-\cvline{Telefon}{\@mobile}
-\cvline{E-Mail}{\href{mailto:tonylattke@gmail.com}{tonylattke@gmail.com}}
-\cvline{Geburtsdaten}{14. Februar 1990 in Caracas, Venezuela}
-\cvline{Staatsbürgerschaft}{Deutsch und Venezolaner}
+\cvline{Name}{\@firstname~\@secondname~\@familyname~\@secondfamilyname}
+%\cvline{Wohnort}{\@addressstreet}
+%\cvline{}{\@addresscity}
+%\cvline{Telefon}{\@mobile}
+\cvline{Geburtsort}{Caracas, Venezuela}
+\cvline{Geburtsdatum}{14. Februar 1990}
+% \cvline{Einreise nach BRD}{14. Mai 2014}
+\cvline{Staatsangehörigkeit}{deutsch, venezolanisch}
 \cvline{Familienstand}{Ledig}
 \cvline{Website}{\href{http://tony.lattke.org}{tony.lattke.org}}
 \cvline{Blog}{\href{http://tonylattke.blogspot.com}{tonylattke.blogspot.com}}
-% \cvline{Präsenzdienst}{abgeleistet}
-% \cvline{Führerschein}{B}
-
+%\cvline{}{}
+\end{minipage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Beruflicher Werdegang} 
 
-\cvline{08.2013 - 11.2013}{\textbf{Autocad Maschinenbauzeichner}, Instalaciones RS 14 ca, Venezuela}
-\cvline{}{- Ich habe für verschiedene Projekte Lüftungskanal und Geräte gezeichnet.}
-
+\cvline{09.2005 - 02.2014}{\textbf{Autocad Maschinenbauzeichner}, Instalaciones RS 14 ca, Venezuela}
+\cvline{}{- Zeichnung der Lüftungskanle und Geräte.}
 \cvline{08.2013 - 11.2013}{\textbf{Web Developer}, Lo mas Trendy, Venezuela}
-\cvline{}{- Ich habe eine Web Application mit Python Django, CSS, HTML5 und Javascript gemacht.}
-\cvline{}{- Ich habe mit Twython von Twitter gearbeitet.}
+\cvline{}{- Web Application mit Django Framework, Twython, CSS, HTML5 und Javascript.}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Ausbildung} 
 
+\cventry{09.2014 -- Jetztzeit}{Intensive deutschkurse A2, B1, B2, C1}{Volkshochschule Bremen}{}{}{}
 \cventry{09.2007 -- 09.2013}{Computer-Ingenieur}{Universidad Simón Bolívar}{Venezuela}{\textit{Abschluss}}{}  % arguments 3 to 6 are optional
-\cventry{09.2002 -- 07.2007}{Gymnasiast}{U. E. Instituto Humanitas}{Caracas, Venezuela}{\textit{Abschluss}}{} 
+\cvline{}{Spezialisierungen: Computergrafik und Entwicklung der Programmiersprachen}
+\cventry{09.2002 -- 07.2007}{Gymnasium}{U. E. Instituto Humanitas}{Caracas, Venezuela}{\textit{Abschluss}}{} 
 %\cventry{xx/xxxx -- xx/xxxx}{Akadem. Grad}{Institution}{Stadt}{\textit{Abschluss}}{Bemerkung} 
+%\cvline{}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Konferenzen}
 
-\cvline{10.2014}{Tony Lattke, Isaac López und Carlos Perez. \textbf{Desarrollo de una herramienta para la generación de contenido aleatorio basado en restricciones.} In \textit{\href{http://www.concisa.net.ve/2014}{CoNCISa 2014} (Informatik-Kongress)}, Caracas, Venezuela.}
+\cvline{10.2014}{Tony Lattke, Isaac López und Carlos Perez. \textbf{Random content generation based on constraints.} In \textit{\href{http://www.concisa.net.ve/2014}{CoNCISa 2014} (Informatik-Kongress)}, Caracas, Venezuela.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Auszeichnungen}
 
-\cvline{10.2014}{Tony Lattke, Isaac López und Carlos Perez. \textbf{Erster Platz im nationalen Wettbewerb aller Abschlussarbeiten des Jahrgangs in der Informatik für die Abschlussarbeit Forschungsthema: „Desarrollo de una herramienta para la generación de contenido aleatorio basado en restricciones”.} In \textit{\href{http://www.concisa.net.ve/2014}{CoNCISa 2014} (Informatik-Kongress)}, Caracas, Venezuela.}
+\cvline{10.2014}{Tony Lattke, Isaac López und Carlos Perez. \textbf{Erster Platz im nationalen Wettbewerb aller Abschlussarbeiten des Jahrgangs in der Informatik für die Abschlussarbeit Forschungsthema: „Random content generation based on constraints”.} In \textit{\href{http://www.concisa.net.ve/2014}{CoNCISa 2014} (Informatik-Kongress)}, Caracas, Venezuela.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Sprachkenntnisse}
+
+\cvline{}{Spanisch (Muttersprache), Deutsch (C1), Englisch (B2)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\BackImage[width=\paperwidth,height=\paperheight]{Inhalt}
+\vspace*{20mm}
+
 
 % \section{Berufserfahrung} 
 
 % \cventry{xx/xxxx -- xx/xxxx}{Musterkaufmann}{Musterfirma}{Musterort}{}{Bemerkung}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Sprachen} 
-
-\cvline{Spanisch}{Muttersprache}{}
-\cvline{Englisch}{Verstehen C1, Sprechen C1, Schreiben C1}
-\cvline{Deutsch}{Verstehen B1, Sprechen B1, Schreiben B1}
-
-%\cvline{Englisch}{Verstehen A1, Sprechen B2, Schreiben C3 \hfill {\scriptsize \itshape Europäische Kompetenzstufe}}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Kenntnisse} 
 
@@ -172,11 +185,11 @@ Als Programmierer arbeite ich bereits sicher mit fremden Codes, kann aber auch g
 \cvline{Andere}{Git, Heroku}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Kompetenzen} 
+% \section{Kompetenzen} 
 
-\cvline{Global Gamejam 2015}{\href{http://globalgamejam.org/2015/games/path-blank}{Path in blank}}
-\cvline{Caracas Gamejam 2013}{\href{http://globalgamejam.org/2013/enter-panic-heart-attack}{Enter The Panic: Heart Attack}}
-\cvline{Caracas Gamejam 2011}{\href{http://archive.globalgamejam.org/2011/enter-panic-attack-matus}{Enter The Panic: The Attack of Matus}}
+% \cvline{Global Gamejam 2015}{\href{http://globalgamejam.org/2015/games/path-blank}{Path in blank}}
+% \cvline{Caracas Gamejam 2013}{\href{http://globalgamejam.org/2013/enter-panic-heart-attack}{Enter The Panic: Heart Attack}}
+% \cvline{Caracas Gamejam 2011}{\href{http://archive.globalgamejam.org/2011/enter-panic-attack-matus}{Enter The Panic: The Attack of Matus}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Universitäre Tätigkeiten} 
@@ -189,11 +202,16 @@ Als Programmierer arbeite ich bereits sicher mit fremden Codes, kann aber auch g
 \cvline{09.2010 -- 07.2011}{„Mitarbeiter” in \href{http://usbceic.ldc.usb.ve}{Computer-Ingenieur Studentenzentrum USB}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newpage
+
+% \BackImage[width=\paperwidth,height=\paperheight]{Inhalt}
+% \vspace*{25mm}
+
 \section{Workshops} 
 \cvline{Miriadax} 			{01.2015 -- 02.2015 „Einführung in Business Intelligence”}
 \cvline{} 					{01.2015 -- 02.2015 „Strategien Marketing-Online. Community Manager”}
 \cvline{} 					{12.2014 \hspace{15mm} „Einführung in die Filmsprache”}
-\cvline{VFX Latino América}	{11.2013 -- 02.2014 „Visueller Effekt und 3D Animation”}
+\cvline{VFX Latino América}	{11.2013 -- 02.2014 „Visuelle Effekte und 3D Animationen”}
 \cvline{Instituto Arts}		{09.2011 \hspace{15mm} „After Effects CS5.5”}
 \cvline{}					{03.2010 \hspace{15mm} „3D Studio Max 2009 Animation und Entwurf von Zeichen”}
 \cvline{}					{12.2009 \hspace{15mm} „3D Studio Max 2009”}
@@ -202,52 +220,42 @@ Als Programmierer arbeite ich bereits sicher mit fremden Codes, kann aber auch g
 \cvline{Uneweb}				{07.2009 \hspace{15mm} „Blender”}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Fähigkeiten und Fertigkeiten} 
-
-\cvline{}{Positive Einstellung.}
-\cvline{}{Bereitschaft, neue Fähigkeiten zu lernen.}
-\cvline{}{Kreativität und Innovation.}
-\cvline{}{Verantwortungsbereitschaft.}
-\cvline{}{Teamfähigkeit.}
-\cvline{}{Führungsqualitäten.}
+\section{Hobbys}
+\cvline{}{Filme, Hörbücher und Fitnessstudio}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{Interessen}
-% \cvline{....}{....}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \renewcommand*{\refname}{Abschlussarbeiten}
-% \nocite{*}
-% \bibliographystyle{cv}
-% \bibliography{publications}       % 'publications' is the name of a BibTeX file
+% \vspace*{20mm}
+% Bremen, \today{}\\
+% \includegraphics[width=150pt]{Unterschrift}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %								Diploma zeugnis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
 
-\chapter{Diplom~~}{Beschreibung}
-\vspace*{1cm}
-\begin{center}
-	Computer-Ingenieur
-\end{center}
+% \newpage
 
-% Spezialisierung
-\cvline{Spezialisierung:}{}
-\cvline{}{Computergrafik}
-\cvline{}{Künstliche Intelligenz}
-\cvline{}{Design und Implementierung von Programmiersprache}
+% \BackImage[width=\paperwidth,height=\paperheight]{Diplom}
+% \vspace*{30mm}
 
-% Wahlfächer
-\cvline{Wahlfächer:}{}
-\cvline{}{Künstliche Intelligenz für Videospiele}
-\cvline{}{Einführung in die Robotik}
-\cvline{}{Themen in Computer-Grafiken in Videospielen}
+% %\chapter{Diplom~~}{Beschreibung}
+% %	Computer-Ingenieur
 
-% Thesis Forschungsthema
-\cvline{Arbeitabschluss Forschungsthema:}{}
-\cvline{}{Das Projekt erhält eine „Außergewöhnlich gut“ Erwähnung: „Desarrollo de una herramienta para la generación de contenido aleatorio basado en restricciones“ (Zufällige Inhalt Generator mit Einschränkungen)}
+% % Spezialisierung
+% \cvline{Spezialisierungen:}{}
+% \cvline{}{Computergrafik}
+% \cvline{}{Künstliche Intelligenz}
+% \cvline{}{Design und Implementierung von Programmiersprache}
+
+% % Wahlfächer
+% \cvline{Wahlfächer:}{}
+% \cvline{}{Künstliche Intelligenz für Videospiele}
+% \cvline{}{Einführung in die Robotik}
+% \cvline{}{Themen in Computer-Grafiken in Videospielen}
+
+% % Thesis Forschungsthema
+% \cvline{Arbeitabschluss Forschungsthema:}{}
+% \cvline{}{Das Projekt erhält eine „Außergewöhnlich gut“ Erwähnung: „Desarrollo de una herramienta para la generación de contenido aleatorio basado en restricciones“ (Zufällige Inhalt Generator mit Einschränkungen)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %									Master

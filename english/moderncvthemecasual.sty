@@ -58,14 +58,14 @@
 % symbols used
 
 % colors
-\definecolor{firstnamecolor}{rgb}{0.65,0.65,0.65}
+\definecolor{firstnamecolor}{rgb}{0,0,0}
 \definecolor{familynamecolor}{rgb}{0.45,0.45,0.45}
 \definecolor{quotecolor}{rgb}{0.35,0.35,0.35}
 \definecolor{addresscolor}{rgb}{0.35,0.35,0.35}
 % default blue color
-  \definecolor{sectionrectanglecolor}{rgb}{0.25,0.50,0.75}
-  \definecolor{sectiontitlecolor}{rgb}{0.20,0.40,0.65}
-  \definecolor{subsectioncolor}{rgb}{0.20,0.40,0.65}
+  \definecolor{sectionrectanglecolor}{rgb}{1,0,0}
+  \definecolor{sectiontitlecolor}{rgb}{0,0,0}
+  \definecolor{subsectioncolor}{rgb}{1,0,0}
   \definecolor{footersymbolcolor}{rgb}{0.25,0.50,0.75}
 \if@colororange
   \definecolor{sectionrectanglecolor}{rgb}{1.00,0.65,0.20}
@@ -79,7 +79,7 @@
   \definecolor{footersymbolcolor}{rgb}{0.30,0.65,0.15}\fi
 \if@colorred
   \definecolor{sectionrectanglecolor}{rgb}{1.00,0.30,0.30}
-  \definecolor{sectiontitlecolor}{rgb}{0.95,0.20,0.20}
+  \definecolor{sectiontitlecolor}{rgb}{0.95,0.20,0.}
   \definecolor{subsectioncolor}{rgb}{0.95,0.20,0.20}
   \definecolor{footersymbolcolor}{rgb}{0.95,0.20,0.20}\fi
 \if@colorgrey
@@ -89,16 +89,16 @@
   \definecolor{footersymbolcolor}{rgb}{0.35,0.35,0.35}\fi
 
 % fonts
-\if@roman
-  \AtBeginDocument{\rmfamily}
-\else
-  \AtBeginDocument{\sffamily}\fi
+%\if@roman
+%  \AtBeginDocument{\rmfamily}
+%\else
+%  \AtBeginDocument{\sffamily}\fi
 \renewcommand*{\ttdefault}{pcr}
 \renewcommand*{\firstnamefont}{\fontsize{38}{40}\sffamily\mdseries\upshape}
 \renewcommand*{\familynamefont}{\firstnamefont}
 \renewcommand*{\addressfont}{\normalsize\sffamily\mdseries\slshape}
 \renewcommand*{\quotefont}{\large\slshape}
-\renewcommand*{\sectionfont}{\large\sffamily\mdseries\upshape}
+\renewcommand*{\sectionfont}{\Large\sffamily\mdseries\upshape}
 \renewcommand*{\subsectionfont}{\large\sffamily\mdseries\upshape}
 
 % styles
@@ -111,7 +111,8 @@
       {{\color{firstnamecolor}\framebox{\includegraphics[width=\@photowidth]{\@photo}}}}%
     \hfill%
 %    \raggedleft{\firstnamestyle{\MakeLowercase{\@firstname}}\familynamestyle{\MakeLowercase{\@familyname}}}\\[-.35em]}%
-    \raggedleft{\firstnamestyle{\@firstname}~\familynamestyle{\@familyname}}\\[-.35em]}%
+    \raggedleft{\firstnamestyle{\@firstname}~\familynamestyle{\@familyname}}\\
+    [-.35em]}%
   {\color{firstnamecolor}\rule{\textwidth}{.25ex}\\[2.5em]}%
 % optional quote
   \ifthenelse{\isundefined{\@quote}}%
@@ -145,7 +146,7 @@
       \ifthenelse{\isundefined{\@extrainfo}}{}{\footersymbol\@extrainfo\@firstfooterelementfalse}}}%
   }%
   \pagestyle{plain}}
-\AtBeginDocument{\makefooter}
+%\AtBeginDocument{\makefooter}
 
 
 \endinput

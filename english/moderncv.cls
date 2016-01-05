@@ -135,10 +135,10 @@
 \AtEndPreamble{
   \@ifpackageloaded{CJK}
     {
-      \ifpdf\RequirePackage[pdftex,CJKbookmarks,colorlinks=True,linkcolor=linkscolorTony,urlcolor=linkscolorTony]{hyperref}
+      \ifpdf\RequirePackage[pdftex,CJKbookmarks]{hyperref}
       \else\RequirePackage[dvips,CJKbookmarks]{hyperref}\fi}
     {
-      \ifpdf\RequirePackage[pdftex,colorlinks=True,linkcolor=linkscolorTony,urlcolor=linkscolorTony]{hyperref}
+      \ifpdf\RequirePackage[pdftex]{hyperref}
       \else\RequirePackage[dvips]{hyperref}\fi}
   \AtBeginDocument{
     \hypersetup{
@@ -215,13 +215,12 @@
 \providecommand*{\homepagesymbol}{{\Large\ComputerMouse}}
 
 % colors
-\definecolor{linkscolorTony}{rgb}{0.25,0.50,0.75}
 \definecolor{firstnamecolor}{rgb}{0,0,0}
 \definecolor{familynamecolor}{rgb}{0,0,0}
 \definecolor{titlecolor}{rgb}{0,0,0}
 \definecolor{addresscolor}{rgb}{0,0,0}
 \definecolor{quotecolor}{rgb}{0,0,0}
-\definecolor{sectionrectanglecolor}{rgb}{0,0,0}
+\definecolor{sectionrectanglecolor}{rgb}{1,1,1}
 \definecolor{sectiontitlecolor}{rgb}{0,0,0}
 \definecolor{subsectioncolor}{rgb}{0,0,0}
 \definecolor{hintcolor}{rgb}{0,0,0}
@@ -324,9 +323,10 @@
 %\newcommand*{\colorrule}[2][1ex]{{\color{sectionrectanglecolor}{\rule{#2}{#1}}}}
 
 % usage: \section{<title>}
+\definecolor{colorbloque}{rgb}{0.29,0.37,0.54}
 \newcommand*{\section}[1]{%
-  \vspace*{2.5ex}%
-  \parbox[m]{\hintscolumnwidth}{\raggedleft\hintfont{\color{sectionrectanglecolor}\rule{\hintscolumnwidth}{1ex}}}%
+
+  \parbox[m]{\hintscolumnwidth}{\raggedleft\hintfont{\color{colorbloque}\rule{\hintscolumnwidth}{1ex}}}%
   \phantomsection{}% reset the anchor for hyperrefs
   \addcontentsline{toc}{part}{#1}%
   \hspace{\separatorcolumnwidth}%
